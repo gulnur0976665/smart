@@ -45,15 +45,14 @@ const CreateProduct = () => {
       setProductName("");
       setProductPrice("");
       setProductCategory("");
-      
     }
   };
 
   return (
     <div className="">
       <div className="container">
-        <div className="mt-[100px]">
-          <div className="w-[35%] mx-auto flex  flex-col items-center  gap-8">
+        <div className="mt-[100px] max-sm:mt-[50px] max-md:mt-[55px] max-lg:mt-[50px] max-xl:mt-[40px]">
+          <div className="w-[45%] mx-auto flex  flex-col items-center  gap-8">
             <div className="">
               <div class="input__wrapper">
                 <input
@@ -74,7 +73,7 @@ const CreateProduct = () => {
                 </label>
               </div>
               <select
-                className="bg-transparent border-2 border-white text-white text-[25px] font-bold text-center px-[20px] py-[4px] outline-none rounded-[5px]"
+                className="bg-transparent border-2 border-white text-white text-[25px] max-sm:text-[19px] max-md:text-[21px] font-bold text-center px-[20px] max-sm:px-[14px] py-[4px] max-sm:py-[3px] outline-none rounded-[5px]"
                 onChange={(e) => setProductCategory(e.target.value)}
                 value={productCategory}>
                 <option value="category">CATEGORY</option>
@@ -83,24 +82,26 @@ const CreateProduct = () => {
                 <option value="speakers">SPEAKERS</option>
               </select>
             </div>
+
+
             <input
               type="text"
               placeholder="Product Name"
               onChange={(e) => setProductName(e.target.value)}
               value={productName}
-              className="bg-transparent w-full border-0 border-b-2 border-white outline-none text-white placeholder:text-white text-[25px] px-1"
+              className="bg-transparent w-full border-0 border-b-2 border-white outline-none text-white placeholder:text-white max-md:placeholder:text-[23px] text-[25px] px-1"
             />
             <input
               type="text"
               placeholder="Product Price"
               onChange={(e) => setProductPrice(e.target.value)}
               value={productPrice}
-              className="bg-transparent w-full border-0 border-b-2 border-white outline-none text-white placeholder:text-white text-[25px] px-1"
+              className="bg-transparent w-full border-0 border-b-2 border-white outline-none text-white placeholder:text-white max-md:placeholder:text-[23px] text-[25px] px-1"
             />
 
             <button
               onClick={() => addCreate()}
-              className="text-white text-[20px] font-bold bg-violet-600 py-[8px] px-[40px] rounded-[10px]">
+              className="text-white text-[20px] font-bold bg-violet-600 py-[8px] max-md:py-[6px] px-[40px] rounded-[10px]">
               Create
             </button>
           </div>

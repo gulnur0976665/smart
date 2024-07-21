@@ -8,9 +8,9 @@ const Search = () => {
         <div>
             <div className="container">
                 <div className="flex items-center flex-wrap gap-[55px]  mt-[50px]">
-                    {
-                        search.map((el ) => <ProductCart el={el} key={el.id}/>)
-                    }
+                   {
+                    search.map((el) => <ProductCart el={el} key={el.id}/>)
+                   }
                 </div>
             </div>
         </div>

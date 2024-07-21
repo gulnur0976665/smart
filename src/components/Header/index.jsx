@@ -20,11 +20,11 @@ const Header = () => {
   return (
     <div className="mt-[30px]">
       <div className="container">
-        <div className="flex items-center justify-evenly mx-auto">
+        <div className="flex max-xl:flex items-center max-xl:items-center justify-between max-xl:justify-between max-xl:gap-[20px] max-sm:gap-[3px]   mx-auto">
           <div className=""></div>
           {search1 ? (
-            <div className="flex items-center gap-[200px] border-2 border-white py-[10px] px-[40px] rounded-[20px]">
-              <div className="flex items-center gap-[60px] text-[30px] text-white font-medium">
+            <div className=" flex items-center gap-[200px] max-sm:gap-[40px] max-md:gap-[30px] max-xl:gap-[100px] max-lg:gap-[50px] border-2 border-white py-[10px] max-md:py-[10px] max-sm:py-[5px] px-[40px] max-sm:px-[16px] max-md:px-[90px] max-lg:px-[18px] rounded-[20px]">
+              <div className="flex items-center gap-[60px] max-md:gap-[30px] max-lg:gap-[25px]  max-sm:gap-[14px]  text-[30px] max-md:text-[22px] max-lg:text-[24px]  max-sm:text-[20px]  text-white font-medium">
                 <Link to={`/`} className="">
                   Home
                 </Link>
@@ -39,10 +39,10 @@ const Header = () => {
                   className="cursor-pointer">
                   Products
                 </a>
-                <a className="">Help Centre</a>
+                <a className="text-[30px] max-md:text-[22px] max-sm:text-[20px] max-lg:text-[24px] flex items-center ">Help <span>Centre</span></a>
               </div>
-              <div className="flex items-center gap-5">
-                <h1 className="text-[25px] text-white font-medium">
+              <div className="flex items-center  gap-5 max-sm:gap-4 max-md:gap-2 ">
+                <h1 className="text-[25px] max-md:text-[22px] max-sm:text-[19px] text-white font-medium">
                   {user.title}
                 </h1>
                 {user.url ? (
@@ -51,7 +51,7 @@ const Header = () => {
                     src={user.url}
                     alt=""
                     width={40}
-                    className="rounded-[50%]"
+                    className="rounded-[50%] w-[40px] max-md:w-[35px] h-[40px]  max-md:h-[35px]"
                   />
                 ) : (
                   <a
@@ -63,7 +63,8 @@ const Header = () => {
               </div>
             </div>
           ) : null}
-          <div className="flex items-center gap-7 text-[30px] text-white relative">
+
+          <div className="flex items-center gap-7 max-sm:gap-4 text-[30px] max-sm:ml-[8px] max-md:ml-[10px] text-white relative">
             {search1 ? (
               <a
                 onClick={() => {
@@ -100,24 +101,25 @@ const Header = () => {
                   }}
                   value={inputValue}
                   type="text"
-                  className="w-[60pc] h-[45px] outline-none rounded-[5px] text-black text-[25px] px-2 placeholder:text-black"
+                  className="w-[60pc] max-sm:w-[30pc] max-md:w-[40pc]  max-lg:w-[45pc] h-[45px] max-sm:h-[40px] bg-transparent border-2 border-black  outline-none rounded-[5px] text-black text-[25px] px-2 placeholder:text-black"
                   placeholder="Product Name"
                 />
               </div>
             ) : null}
-              {basket.length ? (
+            {basket.length ? (
               <h1
                 style={{
                   position: "absolute",
-                  top:"-10px",
-                  right:"40px",
+                  top: "-6px",
+                  right: "40px",
                   background: "red",
                   color: "white",
-                  fontSize:"17px",
+                  fontSize: "15px",
                   borderRadius: "50%",
                   textAlign: "center",
-                  width: "23px",
-                  height: "23px",
+                  width: "20px",
+                  height: "20px",
+                
                 }}>
                 {basket.length}
               </h1>
@@ -130,6 +132,7 @@ const Header = () => {
                 <FaUserPlus />
               </a>
             ) : null}
+        
           </div>
         </div>
       </div>
